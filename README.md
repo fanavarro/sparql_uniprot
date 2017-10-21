@@ -16,7 +16,7 @@ functionAnnotation
 pharmaceuticalAnnotation
 outputFile
 ```
-All params must be provided. If you want to leave a param in blank, an empty string ("") must be specified for the param. For example, to look for protein names whose name includes "insulin" in humans:
+All params must be provided. If you want to leave a param in blank, an empty string ("") must be specified for the param. For example, to look for protein names whose name includes "insulin" in humans and store the results in the file "output.txt":
 ```
 python sparql_uniprot.py "" "insulin" "" "homo sapiens" "" "" "" "" "" "" "output.txt"
 ```
