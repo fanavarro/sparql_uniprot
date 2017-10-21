@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<tool_dependency>
+    <package name="SPARQLWrapper" version="1.7.6">
+        <readme>
+            Install SPARQLWrapper via virtualenv.
+        </readme>
+        <install version="1.0">
+            <actions>
+                <action type="setup_virtualenv">SPARQLWrapper==1.7.6</action>
+            </actions>
+        </install>
+     </package>
+</tool_dependency>

@@ -1,0 +1,57 @@
+<tool id="sparql_uniprot" name="Uniprot Sparql" version="0.1.0">
+  <description>Perform a search into uniprot database using its sparql interface.</description>
+  <requirements>
+    <requirement type="binary">python</requirement>
+    <requirement type="package" version="1.7.6">SPARQLWrapper</requirement>
+  </requirements>
+  <command interpreter="python">sparql_uniprot.py "${protein}" "${proteinName}" "${geneName}" "${organismName}" "${diseaseAnnotation}" "${domainName}" "${similarityAnnotation}" "${locationAnnotation}" "${functionAnnotation}" "${pharmaceuticalAnnotation}" "${output}"</command>
+  <inputs>
+    <param name="protein" type="text" label="Uniprot Identifier"/>
+
+    <param name="proteinName" type="text" label="Protein Name">
+	<!-- sanitizer to use '$' character -->
+	<sanitizer sanitize="False"/>
+    </param>
+
+    <param name="geneName" type="text" label="Gene Name">
+	<sanitizer sanitize="False"/>
+    </param>
+
+    <param name="organismName" type="text" label="Organism">
+	<sanitizer sanitize="False"/>
+    </param>
+
+    <param name="diseaseAnnotation" type="text" label="Disease Annotation">
+	<sanitizer sanitize="False"/>
+    </param>
+
+    <param name="domainName" type="text" label="Domain">
+	<sanitizer sanitize="False"/>
+    </param>
+
+    <param name="similarityAnnotation" type="text" label="Similarity Annotation">
+	<sanitizer sanitize="False"/>
+    </param>
+
+    <param name="locationAnnotation" type="text" label="Location Annotation">
+	<sanitizer sanitize="False"/>
+    </param>
+
+    <param name="functionAnnotation" type="text" label="Function Annotation">
+	<sanitizer sanitize="False"/>
+    </param>
+
+    <param name="pharmaceuticalAnnotation" type="text" label="Pharmaceutical Annotation">
+	<sanitizer sanitize="False"/>
+    </param>
+  </inputs>
+
+  <outputs>
+    <data format="tabular" name="output" />
+  </outputs>
+
+  <help>
+	With this tool you can search proteins using regular expressions by the following fields: uniprot identifier, protein name, gene name , organism name, disease annotation, domain name, similarity annotation, location annotation, function annotation or pharmaceutical annotationText. You can fill the fields you want and the tool will return all the data found in uniprot by filling the other fields. Results will be stored in a tabular format. If you want to search the exact match of a field you should use ^parameter$, for example ^insulin$.
+  </help>
+
+</tool>
