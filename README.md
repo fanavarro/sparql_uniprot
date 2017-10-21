@@ -22,6 +22,6 @@ python sparql_uniprot.py "" "insulin" "" "homo sapiens" "" "" "" "" "" "" "outpu
 ```
 
 ## More info
-This was a project for the Master Degree in Bioinformatics at the University of Murcia (Spain). The documentation of the project was writen in latex and all the files (including the pdf) are under "report" folder. It includes information about the script and how we implemented the galaxy wrapper.
+This was a project for the Master Degree in Bioinformatics at the University of Murcia (Spain). The documentation of the project was written in latex and all the files (including the pdf) are under "report" folder. It includes information about the script and how we implemented the galaxy wrapper.
 
 This project is contained in ToolShed galaxy repository at https://toolshed.g2.bx.psu.edu/view/fabad/sparql_uniprot/
