@@ -3,6 +3,7 @@ Python application to retrieve information from uniprot through its sparql endpo
 
 ## Usage
 The python script receives all the arguments in the following order:
+```
 proteinId
 proteinName
 geneName
@@ -14,7 +15,7 @@ locationAnnotation
 functionAnnotation
 pharmaceuticalAnnotation
 outputFile
-
+```
 All params must be provided. If you want to leave a param in blank, an empty string ("") must be specified for the param. For example, to look for protein names whose name includes "insulin" in humans:
 ```
 python sparql_uniprot.py "" "insulin" "" "human" "" "" "" "" "" "" "output.txt"
