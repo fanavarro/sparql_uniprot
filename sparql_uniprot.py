@@ -174,7 +174,7 @@ def printResults(json, output):
 def sparqlwrap(proteinId, proteinName, geneName, organismName, diseaseAnnotation, domainName, similarityAnnotation, locationAnnotation, functionAnnotation, pharmaceuticalAnnotation, output):
 	
 	query = buildQuery(proteinId, proteinName, geneName, organismName, diseaseAnnotation, domainName, similarityAnnotation, locationAnnotation, functionAnnotation, pharmaceuticalAnnotation)
-	print query
+	print (query)
 
 	# Creamos un objeto del tipo SPARQLWrapper indicando en que
 	# direccion esta el servicio que recibe consultas en sparql
@@ -193,20 +193,20 @@ def sparqlwrap(proteinId, proteinName, geneName, organismName, diseaseAnnotation
 	# Esta es la instruccion que realiza la consulta a
 	# uniprot. Devuelve un objeto de python que hay que
 	# tratar.
-	print "Ejecutando query"
+	print ("Ejecutando query")
 	results = sparql.query()
 
 	# Con esto, convertimos el objeto devuelto por
 	# el servicio al formato que especificamos antes.
 	# En este caso, json.
-	print "Conviertiendo a json"
+	print ("Conviertiendo a json")
 	json = results.convert()
-	print "Fin conversion a json"
+	print ("Fin conversion a json")
 
 	# Dentro de la variable results tenemos informacion
 	# (metadatos) de lo que ha devuelto el servidor de
 	# uniprot.
-	print results.info()
+	print (results.info())
 
 	# Imprimir resultados
 	printResults(json, output)
